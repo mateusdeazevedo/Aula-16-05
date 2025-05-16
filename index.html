@@ -6,14 +6,52 @@
     <title>Formulários - Form</title>
 </head>
 <body>
-        <form>
+        <form action="#"
+              method="post"
+              onsubmit="alert('Formulário enviado!');"
+              autocomplete="on"
+        >  
             <label>Nome: </label>
-            <input type="text" />
+            <input type="text" name="nome"/>
             </br>
             <label>Senha:</label>
-            <input type="password" />
+            <input type="password" name="senha"/>
             </br>
-            <button type="submit"> Enviar</button>
+            <label>Idade: </label>
+            <input type="number" placeholder="idade" 
+                   min="0" max="200" />
+            </br> <!--Quebra linhas-->
+            <label>E-mail:</label>
+            <input type="email" name="e-mail"/>
+            </br>
+            <label>Data de nascimento:</label>
+            <input type="date" name="data"/>
+            </br>
+            <input type="checkbox" name="futebol"/><label>Futebol</label>
+            </br>
+            <input type="checkbox" name="volei"/><label>Vôlei</label>
+            </br>
+            <input type="checkbox" name="basquete"/><label>Basquete</label>
+            </br>
+            <input type="radio" name="time"/><label>Cruzeiro</label>
+            </br>
+            <input type="radio" name="time"/><label>Atlético-MG</label>
+            </br>
+            <input type="radio" name="time"/><label>Flamengo</label>
+            </br>
+            <label>Observações:</label>
+            <textarea name="observacoes" placeholder="Digite aqui..."> </textarea>
+            </br>
+            <label>Cidade:</label>
+            <select name="cidade">
+                <option value="vg">Varginha</option>
+                <option value="tp">Três Pontas</option>
+                <option value="em">Elói Mendes</option>
+            </select>
+            </br>
+            <button type="reset">Limpar </button>
+            <button type="submit">Enviar</button>
+            <input type="button" value="Teste" onclick="alter('clicou');"/>
         </form>
 </body>
 </html>
